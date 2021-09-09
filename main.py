@@ -23,7 +23,7 @@ def jalankanWaktu():
     labelWaktu.after(1000, jalankanWaktu)
     #Update setiap 1 detik sekali 
 
-labelWaktu = Label(Screen, text = "", font= ("Kameron", 60), fg = "#03fc35" )
+labelWaktu = Label(Screen, text = "", font= ("Kameron", 60), fg = "#03fc35", bg = "black" )
 labelWaktu.pack(pady= 250)
 
 jalankanWaktu()
