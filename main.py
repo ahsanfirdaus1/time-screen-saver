@@ -8,7 +8,13 @@ Screen.attributes("-fullscreen", True)
 Screen.bind("<F11>", lambda event: Screen.attributes("-fullscreen", not Screen.attributes("-fullscreen")))
 Screen.bind("<Escape>", lambda event: Screen.attributes("-fullscreen", False))
 
-labelWaktu = Label(Screen, text = "", font= ("Kameron", 60), fg = "#03fc35", bg = "black" )
+Screen.title('Timer by Ahsan')
+Screen.geometry('1400x800')
+Screen.config(bg="black")
+
+labelWaktu = Label(Screen, text = "", font= ("Kameron", 60), fg = "#03fc35" )
 labelWaktu.pack(pady= 250)
+
+jalankanWaktu()
 
 Screen.mainloop()
