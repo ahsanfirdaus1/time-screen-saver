@@ -17,6 +17,7 @@ def pickTheColour():
 
 def changeTheColour(pickOne):
     myScreen.config(bg= pickOne)
+    timeLabel.config(bg = pickOne)
 
 def changeColourPlease():
     newColour = pickTheColour()
@@ -34,13 +35,13 @@ def thisTime():
     minuteToday = time.strftime("%M")
     secondToday = time.strftime("%S")
 
-    timeLabel.config(text = dayToday.upper() + "\n" + hourToday + ":" + minuteToday + ":" + secondToday)
+    timeLabel.config(text = dayToday.upper() + "\n" + hourToday + ":" + minuteToday + ":" + secondToday )
     timeLabel.after(1000, thisTime)
 
 timeLabel = Label(myScreen, text = "", font = ("Kameon", 86), fg = "white", bg = "black")
 timeLabel.pack(pady = 150)
 
-changeColorButton = Button(myScreen, bg = "silver", height= 30, width = 30, command= changeColourPlease)
+changeColorButton = Button(myScreen,bg = "white", height= 1, width = 1, command= changeColourPlease).pack()
 
 thisTime()
 
