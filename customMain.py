@@ -22,6 +22,8 @@ def changeColourPlease():
     newColour = pickTheColour()
     changeTheColour(newColour)
 
+refresh = PhotoImage(file = "C:/_data/_Ahsan/New_Data_3Nov_2020/Belajar Coding/003 - Python/008 - Python Project For Lab TI/001 - Custom Time Screen Saver/refresh.png")
+
 myScreen.title('Time by Ahsan')
 myScreen.config(bg = "black")
 
@@ -36,9 +38,9 @@ def thisTime():
     timeLabel.after(1000, thisTime)
 
 timeLabel = Label(myScreen, text = "", font = ("Kameon", 86), fg = "white", bg = "black")
-timeLabel.pack(pady = 250)
+timeLabel.pack(pady = 150)
 
-changeColorButton = Button(myScreen, text= "Change Colour", command= changeColourPlease).pack()
+changeColorButton = Button(myScreen, bg = "silver", height= 30, width = 30, command= changeColourPlease)
 
 thisTime()
 
