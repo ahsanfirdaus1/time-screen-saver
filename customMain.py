@@ -31,11 +31,14 @@ myScreen.config(bg = "black")
 
 def thisTime():
     dayToday = time.strftime("%A")
+    dateToday = time.strftime("%d")
+    monthToday = time.strftime("%b")
+    yearToday = time.strftime("%Y")
     hourToday = time.strftime("%H")
     minuteToday = time.strftime("%M")
     secondToday = time.strftime("%S")
 
-    timeLabel.config(text = dayToday.upper() + "\n" + hourToday + ":" + minuteToday + ":" + secondToday )
+    timeLabel.config(text = dayToday.upper() + "\n" + dateToday + " " + monthToday + " " + yearToday +  "\n" + hourToday + ":" + minuteToday + ":" + secondToday )
     timeLabel.after(1000, thisTime)
 
 timeLabel = Label(myScreen, text = "", font = ("Kameon", 86), fg = "white", bg = "black")
